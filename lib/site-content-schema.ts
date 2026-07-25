@@ -1,0 +1,47 @@
+export type SiteContent = {
+  hero: { eyebrow: string; title: string; highlight: string; description: string };
+  contact: { whatsapp: string; displayWhatsapp: string; email: string; location: string };
+  logistics: { eyebrow: string; title: string; highlight: string; description: string; demoUrl: string };
+  pricing: Array<{ name: string; price: string; description: string; features: string[] }>;
+  faq: Array<{ question: string; answer: string }>;
+  updatedAt: string;
+  updatedBy: string;
+};
+
+export const defaultSiteContent: SiteContent = {
+  hero: {
+    eyebrow: 'Partner Digital untuk Bisnis Modern',
+    title: 'Bangun Pengalaman Digital yang',
+    highlight: 'Mendorong Pertumbuhan.',
+    description: 'Kami membantu bisnis merancang website dan aplikasi yang cepat, elegan, mudah digunakan, dan selaras dengan tujuan bisnis.',
+  },
+  contact: {
+    whatsapp: '6287886626130',
+    displayWhatsapp: '0878-8662-6130',
+    email: 'hello@movetra.id',
+    location: 'Indonesia',
+  },
+  logistics: {
+    eyebrow: 'PRODUK MOVETRA · LOGISTIK',
+    title: 'Pencatatan perjalanan',
+    highlight: 'yang lebih tertib.',
+    description: 'Aplikasi operasional untuk membantu driver mencatat perjalanan dan tim admin memeriksa laporan dalam satu sistem yang lebih mudah dipantau.',
+    demoUrl: 'https://jne-mobil-km-app.vercel.app',
+  },
+  pricing: [
+    { name: 'Website Esensial', price: 'Mulai Rp3,5 juta', description: 'Untuk UMKM dan profesional yang membutuhkan kehadiran digital kredibel.', features: ['Hingga 5 halaman', 'Desain responsif', 'Form & WhatsApp', 'SEO dasar', '2 kali revisi'] },
+    { name: 'Website Bisnis', price: 'Mulai Rp7,5 juta', description: 'Untuk perusahaan yang membutuhkan struktur konten dan fitur lebih lengkap.', features: ['Hingga 10 halaman', 'Desain khusus', 'CMS atau katalog', 'Analitik & SEO dasar', '3 kali revisi'] },
+    { name: 'Aplikasi Khusus', price: 'Sesuai kebutuhan', description: 'Untuk sistem operasional, portal, dashboard, atau integrasi khusus.', features: ['Analisis kebutuhan', 'UI/UX terarah', 'Pengembangan bertahap', 'Pengujian pengguna', 'Dukungan peluncuran'] },
+  ],
+  faq: [
+    { question: 'Berapa lama proses pengerjaannya?', answer: 'Website sederhana umumnya membutuhkan 2–4 minggu. Website bisnis dan aplikasi khusus menyesuaikan ruang lingkup, kesiapan materi, serta integrasi yang diperlukan.' },
+    { question: 'Apakah domain dan hosting sudah termasuk?', answer: 'Kami dapat membantu pengadaan dan konfigurasi domain serta hosting. Biaya layanan pihak ketiga akan disampaikan terpisah agar tetap transparan.' },
+    { question: 'Apakah website bisa saya kelola sendiri?', answer: 'Bisa. Jika proyek membutuhkan pembaruan rutin, kami dapat menyediakan panel pengelolaan dan panduan penggunaan untuk tim Anda.' },
+    { question: 'Bagaimana sistem revisinya?', answer: 'Jumlah revisi mengikuti paket atau proposal yang disepakati. Setiap tahap akan mendapat persetujuan agar perubahan tetap terarah.' },
+    { question: 'Apakah tersedia layanan pemeliharaan?', answer: 'Ya. Pemeliharaan dapat mencakup pembaruan, pencadangan, pemantauan, perbaikan minor, dan dukungan teknis berkala.' },
+    { question: 'Bagaimana sistem pembayarannya?', answer: 'Pembayaran dilakukan bertahap sesuai milestone proyek. Rincian termin, hasil kerja, dan jadwal akan tertulis jelas dalam proposal.' },
+  ],
+  updatedAt: '',
+  updatedBy: 'System',
+};
+

@@ -1,0 +1,7 @@
+const MOVETRA='6287886626130';
+const menu=document.querySelector('.menu'),nav=document.querySelector('nav'),toast=document.querySelector('.toast');
+menu?.addEventListener('click',()=>{nav.classList.toggle('open');menu.textContent=nav.classList.contains('open')?'×':'☰'});
+const notify=()=>{toast?.classList.add('show');setTimeout(()=>toast?.classList.remove('show'),1800)};
+document.querySelectorAll('#interest-grid .widget-card').forEach(card=>card.addEventListener('click',()=>{document.querySelectorAll('#interest-grid .widget-card').forEach(x=>x.classList.remove('active'));card.classList.add('active');const program=card.dataset.program;const result=document.querySelector('#program-result');result.querySelector('b').textContent=`Rekomendasi: ${program}`;result.querySelector('p').textContent='Program berbasis proyek, didukung dosen praktisi, magang, dan jalur karier.';result.classList.add('show');notify()}));
+document.querySelector('form')?.addEventListener('submit',e=>{e.preventDefault();const program=e.currentTarget.querySelector('select').value;window.open(`https://wa.me/${MOVETRA}?text=${encodeURIComponent(`Halo MOVETRA, saya mencoba demo Nawasena University. Kami membutuhkan website sekolah/kampus dengan informasi program ${program}.`)}`,'_blank')});
+document.querySelector('.wa-float').href=`https://wa.me/${MOVETRA}?text=${encodeURIComponent('Halo MOVETRA, saya butuh website seperti demo Nawasena University untuk sekolah/kampus kami. Mohon informasi fitur dan harga.')}`;
